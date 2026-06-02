@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOFOU Shop</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav style="background:#111;position:relative;">
+
+    <div class="logo">
+        LOFOU
+    </div>
+
+    <div class="menu">
+
+        <a href="index.html">HOME</a>
+
+        <a href="shop.html">SHOP</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <div class="nav-icons">
+
+        <a href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+        </a>
+
+        <a href="cart.html" class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- PAGE HEADER -->
+
+<section class="page-header">
+
+    <h1>
+        SHOP COLLECTION
+    </h1>
+
+    <p>
+        Discover premium essentials crafted for modern men.
+    </p>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="product-grid">
+
+    <!-- PRODUCT 1 -->
+
+    <div class="product-card">
+
+        <img src="images/shirt.jpg">
+
+        <div class="product-info">
+
+            <h3>
+                LOFOU Essential Tee
+            </h3>
+
+            <p>
+                ₹999
+            </p>
+
+            <button onclick="addToCart(1)">
+                ADD TO CART
+            </button>
+
+            <br><br>
+
+            <button onclick="addToWishlist(1)">
+                ♥ WISHLIST
+            </button>
+
+            <br><br>
+
+            <a href="product.html?id=1">
+                View Details →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 2 -->
+
+    <div class="product-card">
+
+        <img src="images/oversized.jpg">
+
+        <div class="product-info">
+
+            <h3>
+                LOFOU Oversized Tee
+            </h3>
+
+            <p>
+                ₹1199
+            </p>
+
+            <button onclick="addToCart(2)">
+                ADD TO CART
+            </button>
+
+            <br><br>
+
+            <button onclick="addToWishlist(2)">
+                ♥ WISHLIST
+            </button>
+
+            <br><br>
+
+            <a href="product.html?id=2">
+                View Details →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 3 -->
+
+    <div class="product-card">
+
+        <img src="images/basics.jpg">
+
+        <div class="product-info">
+
+            <h3>
+                LOFOU Premium Basic Tee
+            </h3>
+
+            <p>
+                ₹1499
+            </p>
+
+            <button onclick="addToCart(3)">
+                ADD TO CART
+            </button>
+
+            <br><br>
+
+            <button onclick="addToWishlist(3)">
+                ♥ WISHLIST
+            </button>
+
+            <br><br>
+
+            <a href="product.html?id=3">
+                View Details →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 4 -->
+
+    <div class="product-card">
+
+        <img src="images/arrival.jpg">
+
+        <div class="product-info">
+
+            <h3>
+                LOFOU Urban Fit Tee
+            </h3>
+
+            <p>
+                ₹1099
+            </p>
+
+            <button onclick="addToCart(4)">
+                ADD TO CART
+            </button>
+
+            <br><br>
+
+            <button onclick="addToWishlist(4)">
+                ♥ WISHLIST
+            </button>
+
+            <br><br>
+
+            <a href="product.html?id=4">
+                View Details →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 5 -->
+
+    <div class="product-card">
+
+        <img src="images/shirt.jpg">
+
+        <div class="product-info">
+
+            <h3>
+                LOFOU Black Tee
+            </h3>
+
+            <p>
+                ₹1299
+            </p>
+
+            <button onclick="addToCart(5)">
+                ADD TO CART
+            </button>
+
+            <br><br>
+
+            <button onclick="addToWishlist(5)">
+                ♥ WISHLIST
+            </button>
+
+            <br><br>
+
+            <a href="product.html?id=5">
+                View Details →
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCT 6 -->
+
+    <div class="product-card">
+
+        <img src="images/banner.jpg">
+
+        <div class="product-info">
+
+            <h3>
+                LOFOU Signature Tee
+            </h3>
+
+            <p>
+                ₹1599
+            </p>
+
+            <button onclick="addToCart(6)">
+                ADD TO CART
+            </button>
+
+            <br><br>
+
+            <button onclick="addToWishlist(6)">
+                ♥ WISHLIST
+            </button>
+
+            <br><br>
+
+            <a href="product.html?id=6">
+                View Details →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        LOFOU
+    </h2>
+
+    <p>
+        Defined By Style
+    </p>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+
+<script>
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>

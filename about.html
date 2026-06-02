@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About LOFOU</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.about-page{
+    min-height:100vh;
+}
+
+.about-hero{
+    height:60vh;
+    position:relative;
+}
+
+.about-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.about-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.4);
+}
+
+.about-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+
+.about-content h1{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.story-section{
+    padding:100px 10%;
+    background:white;
+}
+
+.story-section h2{
+    margin-bottom:30px;
+    font-size:40px;
+}
+
+.story-section p{
+    line-height:2;
+    color:#555;
+    max-width:900px;
+}
+
+.values{
+    padding:100px 10%;
+    background:#f5f1ea;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+}
+
+.value-card{
+    background:white;
+    padding:40px;
+    text-align:center;
+}
+
+.value-card i{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.value-card h3{
+    margin-bottom:15px;
+}
+
+.mission{
+    background:#111;
+    color:white;
+    padding:100px 10%;
+    text-align:center;
+}
+
+.mission h2{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+.mission p{
+    max-width:800px;
+    margin:auto;
+    line-height:2;
+}
+
+@media(max-width:768px){
+
+.values{
+    grid-template-columns:1fr;
+}
+
+.about-content h1{
+    font-size:45px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav style="background:#111;position:relative;">
+
+    <div class="logo">
+        LOFOU
+    </div>
+
+    <div class="menu">
+
+        <a href="index.html">HOME</a>
+
+        <a href="shop.html">SHOP</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <div class="nav-icons">
+
+        <a href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+        </a>
+
+        <a href="cart.html" class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">0</span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="about-hero">
+
+    <img src="images/banner.jpg">
+
+    <div class="about-overlay"></div>
+
+    <div class="about-content">
+
+        <h1>ABOUT LOFOU</h1>
+
+        <p>
+            Defined By Style
+        </p>
+
+    </div>
+
+</section>
+
+<!-- STORY -->
+
+<section class="story-section">
+
+    <h2>
+        Our Story
+    </h2>
+
+    <p>
+
+        LOFOU was created with a vision to redefine modern menswear.
+
+        We believe fashion should be simple, timeless, and confident.
+
+        Every piece is designed to blend premium quality, comfort,
+        and effortless style.
+
+        Our collections focus on clean silhouettes, premium fabrics,
+        and versatile essentials that can be worn every day.
+
+        LOFOU is more than clothing — it is a statement of confidence,
+        individuality, and sophistication.
+
+    </p>
+
+</section>
+
+<!-- VALUES -->
+
+<section class="values">
+
+    <div class="value-card">
+
+        <i class="fa-solid fa-shirt"></i>
+
+        <h3>
+            Premium Quality
+        </h3>
+
+        <p>
+            Crafted with carefully selected fabrics.
+        </p>
+
+    </div>
+
+    <div class="value-card">
+
+        <i class="fa-solid fa-gem"></i>
+
+        <h3>
+            Timeless Design
+        </h3>
+
+        <p>
+            Minimal pieces designed to last.
+        </p>
+
+    </div>
+
+    <div class="value-card">
+
+        <i class="fa-solid fa-earth-asia"></i>
+
+        <h3>
+            Modern Lifestyle
+        </h3>
+
+        <p>
+            Fashion built for today's generation.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- MISSION -->
+
+<section class="mission">
+
+    <h2>
+        Our Mission
+    </h2>
+
+    <p>
+
+        To create premium essentials that empower men to express
+        confidence and individuality through timeless style.
+
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        LOFOU
+    </h2>
+
+    <p>
+        Modern essentials crafted with precision,
+        for the man who values quality and confidence.
+    </p>
+
+</footer>
+
+<script src="js/cart.js"></script>
+
+<script>
+updateCartCount();
+</script>
+
+</body>
+</html>

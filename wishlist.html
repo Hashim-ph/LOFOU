@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOFOU Wishlist</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.wishlist-page{
+    padding:120px 10%;
+    min-height:100vh;
+}
+
+.wishlist-page h1{
+    margin-bottom:40px;
+}
+
+.wishlist-item{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.wishlist-item img{
+    width:140px;
+    height:180px;
+    object-fit:cover;
+}
+
+.wishlist-actions{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.wishlist-actions button{
+    padding:10px 18px;
+    border:none;
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+
+.empty-state{
+    text-align:center;
+    padding:100px 0;
+}
+
+.empty-state a{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 25px;
+    background:black;
+    color:white;
+}
+
+@media(max-width:768px){
+
+.wishlist-item{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav style="background:#111;position:relative;">
+
+    <div class="logo">
+        LOFOU
+    </div>
+
+    <div class="menu">
+
+        <a href="index.html">HOME</a>
+
+        <a href="shop.html">SHOP</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <div class="nav-icons">
+
+        <a href="wishlist.html" class="cart-icon">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <span id="wishlistCount">
+                0
+            </span>
+
+        </a>
+
+        <a href="cart.html" class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- WISHLIST -->
+
+<section class="wishlist-page">
+
+    <h1>
+        My Wishlist
+    </h1>
+
+    <div id="wishlistItems">
+
+        <!-- wishlist.js renders here -->
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        LOFOU
+    </h2>
+
+    <p>
+        Defined By Style
+    </p>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+
+<script>
+
+// =========================
+// CUSTOM WISHLIST RENDER
+// =========================
+
+function renderWishlist(){
+
+    const container =
+    document.getElementById(
+        "wishlistItems"
+    );
+
+    const wishlist =
+    getWishlist();
+
+    if(wishlist.length === 0){
+
+        container.innerHTML = `
+
+        <div class="empty-state">
+
+            <h2>
+                Your Wishlist Is Empty
+            </h2>
+
+            <p>
+                Save your favorite products here.
+            </p>
+
+            <a href="shop.html">
+                Continue Shopping
+            </a>
+
+        </div>
+
+        `;
+
+        return;
+    }
+
+    container.innerHTML = "";
+
+    wishlist.forEach(item => {
+
+        container.innerHTML += `
+
+        <div class="wishlist-item">
+
+            <img src="${item.image}">
+
+            <div>
+
+                <h2>
+                    ${item.name}
+                </h2>
+
+                <p>
+                    ₹${item.price}
+                </p>
+
+                <div class="wishlist-actions">
+
+                    <button
+                        onclick="addToCart(${item.id})">
+
+                        Add To Cart
+
+                    </button>
+
+                    <button
+                        onclick="
+                        removeFromWishlist(${item.id})
+                        ">
+
+                        Remove
+
+                    </button>
+
+                    <button
+                        onclick="
+                        location.href=
+                        'product.html?id=${item.id}'
+                        ">
+
+                        View Product
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr><br>
+
+        `;
+
+    });
+
+}
+
+// =========================
+// LOAD PAGE
+// =========================
+
+renderWishlist();
+
+updateWishlistCount();
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>

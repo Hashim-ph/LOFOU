@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOFOU | Defined By Style</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- ==========================
+     LOADER
+========================== -->
+
+<div id="loader">
+
+    <div class="loader-container">
+
+        <img src="images/logo.png"
+             class="loader-logo"
+             alt="LOFOU Logo">
+
+        <div class="loader-line"></div>
+
+        <p class="loader-text">
+            DEFINED BY STYLE
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+     NAVBAR
+========================== -->
+
+<nav>
+
+    <div class="logo">
+        LOFOU
+    </div>
+
+    <div class="menu">
+
+        <a href="index.html">HOME</a>
+
+        <a href="shop.html">SHOP</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <div class="nav-icons">
+
+        <a href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+        </a>
+
+        <a href="cart.html" class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- ==========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <img src="images/hero.png" alt="Hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <p>TIMELESS MENSWEAR</p>
+
+        <h1>LOFOU</h1>
+
+        <button onclick="window.location.href='shop.html'">
+            EXPLORE COLLECTION →
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     NEW ARRIVALS
+========================== -->
+
+<section class="feature">
+
+    <div class="feature-text">
+
+        <p>NEW ARRIVALS</p>
+
+        <h2>
+            ESSENTIALS FOR EVERY MOMENT.
+        </h2>
+
+        <a href="shop.html">
+            SHOP NOW →
+        </a>
+
+    </div>
+
+    <img src="images/arrival.png">
+
+</section>
+
+<!-- ==========================
+     COLLECTIONS
+========================== -->
+
+<section class="grid">
+
+    <div class="card">
+
+        <img src="images/oversized.jpg">
+
+        <div class="card-content">
+
+            <h3>
+                OVERSIZED TEES
+            </h3>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <img src="images/basics.jpg">
+
+        <div class="card-content">
+
+            <h3>
+                PREMIUM BASICS
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     BRAND BANNER
+========================== -->
+
+<section class="banner">
+
+    <img src="images/banner.jpg">
+
+    <div class="banner-overlay">
+
+        <h2>
+            LOFOU
+        </h2>
+
+        <p>
+            DEFINED BY STYLE
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     FEATURED PRODUCT
+========================== -->
+
+<section class="promo">
+
+    <div class="promo-left">
+
+        <img src="images/shirt.jpg">
+
+    </div>
+
+    <div class="promo-right">
+
+        <div class="offer">
+
+            <p>
+                JOIN THE LOFOU COMMUNITY
+            </p>
+
+            <h2>
+                EXCLUSIVE ACCESS & OFFERS
+            </h2>
+
+            <button onclick="window.location.href='shop.html'">
+                SHOP NOW
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+     FEATURES
+========================== -->
+
+<section class="features">
+
+    <div>
+        <h4>Premium Quality</h4>
+        <p>Finest Materials</p>
+    </div>
+
+    <div>
+        <h4>Secure Payments</h4>
+        <p>100% Protected</p>
+    </div>
+
+    <div>
+        <h4>Easy Returns</h4>
+        <p>Hassle Free</p>
+    </div>
+
+    <div>
+        <h4>Worldwide Shipping</h4>
+        <p>Fast Delivery</p>
+    </div>
+
+</section>
+
+<!-- ==========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <h2>
+        LOFOU
+    </h2>
+
+    <p>
+        Modern essentials crafted with precision,
+        for the man who values quality and confidence.
+    </p>
+
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/products.js"></script>
+
+<script>
+
+window.addEventListener("load",function(){
+
+    setTimeout(function(){
+
+        document
+            .getElementById("loader")
+            .classList.add("loader-hide");
+
+    },3000);
+
+});
+
+</script>
+
+</body>
+</html>

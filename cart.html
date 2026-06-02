@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LOFOU Cart</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.cart-page{
+    padding:120px 10%;
+    min-height:100vh;
+}
+
+.cart-page h1{
+    margin-bottom:40px;
+}
+
+.cart-item{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.cart-item img{
+    width:140px;
+    height:180px;
+    object-fit:cover;
+}
+
+.cart-item button{
+    padding:8px 15px;
+    margin:5px;
+    border:none;
+    cursor:pointer;
+    background:black;
+    color:white;
+}
+
+.cart-summary{
+    margin-top:50px;
+    padding:30px;
+    background:#fff;
+    border:1px solid #ddd;
+}
+
+.cart-summary h2{
+    margin-bottom:20px;
+}
+
+.checkout-btn{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    background:black;
+    color:white;
+    cursor:pointer;
+    width:100%;
+}
+
+@media(max-width:768px){
+
+.cart-item{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav style="background:#111;position:relative;">
+
+    <div class="logo">
+        LOFOU
+    </div>
+
+    <div class="menu">
+
+        <a href="index.html">HOME</a>
+
+        <a href="shop.html">SHOP</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </div>
+
+    <div class="nav-icons">
+
+        <a href="wishlist.html">
+            <i class="fa-regular fa-heart"></i>
+        </a>
+
+        <a href="cart.html" class="cart-icon">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- CART PAGE -->
+
+<section class="cart-page">
+
+    <h1>
+        Shopping Cart
+    </h1>
+
+    <div id="cartItems">
+
+        <!-- Cart.js renders items here -->
+
+    </div>
+
+    <div class="cart-summary">
+
+        <h2>
+            Order Summary
+        </h2>
+
+        <p>
+
+            Total:
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </p>
+
+        <button
+            class="checkout-btn"
+            onclick="checkout()">
+
+            Proceed To Checkout
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        LOFOU
+    </h2>
+
+    <p>
+        Defined By Style
+    </p>
+
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+
+<script>
+
+// =========================
+// CHECKOUT
+// =========================
+
+function checkout(){
+
+    const cart =
+    JSON.parse(
+        localStorage.getItem("cart")
+    ) || [];
+
+    if(cart.length === 0){
+
+        alert(
+            "Your cart is empty"
+        );
+
+        return;
+    }
+
+    alert(
+        "Checkout integration coming soon!"
+    );
+
+}
+
+// =========================
+// LOAD CART
+// =========================
+
+renderCart();
+
+updateCartCount();
+
+</script>
+
+</body>
+</html>

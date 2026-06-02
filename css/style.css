@@ -536,3 +536,102 @@ footer p{
     }
 
 }
+
+.product-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:16px;
+    background:#fff;
+    transition:.4s ease;
+}
+
+.product-card img{
+    width:100%;
+    display:block;
+    transition:.5s ease;
+}
+
+.product-card:hover img{
+    transform:scale(1.08);
+}
+
+.product-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+
+    opacity:0;
+    visibility:hidden;
+    transition:.4s ease;
+}
+
+.product-card:hover .product-overlay{
+    opacity:1;
+    visibility:visible;
+}
+
+.cart-btn{
+    background:#fff;
+    color:#111;
+    border:none;
+    padding:14px 24px;
+    border-radius:50px;
+    cursor:pointer;
+    font-weight:600;
+    transform:translateY(20px);
+    transition:.3s;
+}
+
+.wish-btn{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border:none;
+    background:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transform:translateY(20px);
+    transition:.3s;
+}
+
+.product-card:hover .cart-btn,
+.product-card:hover .wish-btn{
+    transform:translateY(0);
+}
+
+.cart-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+.wish-btn:hover{
+    background:#ff3b5f;
+    color:#fff;
+}
+
+.product-info{
+    padding:15px;
+    text-align:center;
+}
+
+.details-btn{
+    background:transparent;
+    color:#fff;
+    text-decoration:none;
+    border:1px solid #fff;
+    padding:12px 24px;
+    border-radius:50px;
+    transition:.3s;
+    font-size:14px;
+    font-weight:500;
+}
+
+.details-btn:hover{
+    background:#fff;
+    color:#111;
+}
